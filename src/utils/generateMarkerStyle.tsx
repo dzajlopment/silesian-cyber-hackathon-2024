@@ -11,7 +11,7 @@ export default function generateMarkerStyle(
 ) {
   // Base class for marker
   const baseClass =
-    'rounded-full bg-blue-500 text-[#262D40] flex justify-center items-center flex-row whitespace-nowrap !w-fit px-4 py-3 !h-auto font-regular text-base';
+    'rounded-full bg-blue-500 text-[#262D40] flex justify-center items-center flex-row whitespace-nowrap !w-fit px-4 py-2.5 !h-auto font-regular text-base';
 
   // Default marker style
   let marker = {

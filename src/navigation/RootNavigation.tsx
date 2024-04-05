@@ -20,7 +20,7 @@ export const RootNavigation = () => {
     <>
       {/* Header section */}
       <header className="px-6 pb-6 pt-12 flex items-baseline gap-4 bg-blurry-white">
-        <h1 className="text-4xl">Dzajlopment</h1> {/* Company name */}
+        <h1 className="text-4xl">Keiko Corp</h1> {/* Company name */}
         <p>28 Smitty Storages, LA, B</p> {/* Company address */}
       </header>
       {/* Navigation section */}
