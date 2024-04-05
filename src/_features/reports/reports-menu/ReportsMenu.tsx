@@ -8,7 +8,7 @@ export type ReportsMenuProps = {
 export const ReportsMenu = (props: ReportsMenuProps) => {
   return (
     <nav>
-      <p className="p-4">
+      <p className="p-4 border-b-[1px] border-separator">
         Reports <span className="opacity-50">({props.reports.length})</span>
       </p>
       <ul className="flex flex-col">
