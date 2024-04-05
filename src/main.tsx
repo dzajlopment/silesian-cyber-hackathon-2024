@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
+import {LiveUsageScreen} from './_features/live-usage/LiveUsageScreen.tsx';
 import {Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import {MapScreen} from './_features/map';
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             <MapScreen />
           </section>
         ),
+      },
+      {
+        path: 'live-usage',
+        element: <LiveUsageScreen />,
       },
     ],
   },
