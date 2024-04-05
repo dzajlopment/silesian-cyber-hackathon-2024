@@ -14,6 +14,10 @@ const routes: RootNavigationRoute[] = [
     title: 'Live usage',
     to: '/live-usage',
   },
+  {
+    title: 'Reports',
+    to: '/reports',
+  },
 ];
 
 export const RootNavigation = () => {

@@ -7,6 +7,7 @@ import {LiveUsageScreen} from './_features/live-usage/LiveUsageScreen.tsx';
 import {Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import {MapScreen} from './_features/map';
+import {ReportsScreen} from './_features/reports/ReportsScreen.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: 'live-usage',
         element: <LiveUsageScreen />,
+      },
+      {
+        path: 'reports',
+        element: <ReportsScreen />,
       },
     ],
   },
