@@ -20,8 +20,6 @@ const Map = ({children}: MapContainerProps) => {
       scrollWheelZoom={true} // Enabling zooming with mouse wheel
       zoomControl={false} // Disabling zoom control
       attributionControl={false}>
-      {' '}
-      // Disabling attribution control
       {/* Tile layer of the map */}
       <TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png" />
       {/* Rendering children of the Map component */}
