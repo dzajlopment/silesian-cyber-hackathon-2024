@@ -14,7 +14,7 @@ const Map = ({children}: MapContainerProps) => {
     // MapContainer from react-leaflet library
     <MapContainer
       ref={mapRef} // Setting map reference
-      className="map-container h-full w-full absolute" // CSS class for map container
+      className="map-container h-full w-full rounded-t-2xl p-1" // CSS class for map container
       center={[51.505, -0.09]} // Initial map center
       zoom={16} // Initial map zoom level
       scrollWheelZoom={true} // Enabling zooming with mouse wheel

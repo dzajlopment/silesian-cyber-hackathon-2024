@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
 import {Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
@@ -15,7 +15,8 @@ const router = createBrowserRouter([
       {
         path: 'map',
         element: (
-          <section className="w-full h-full relative ">
+          <section className="w-full h-full relative flex ">
+            <Outlet />
             <MapScreen />
           </section>
         ),
