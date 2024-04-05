@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
+import {LiveUsageScreen} from './_features/live-usage/LiveUsageScreen.tsx';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: 'map',
         element: <h1>Map</h1>,
+      },
+      {
+        path: 'live-usage',
+        element: <LiveUsageScreen />,
       },
     ],
   },
