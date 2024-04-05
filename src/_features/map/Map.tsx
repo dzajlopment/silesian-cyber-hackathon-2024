@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import {MapContainer, TileLayer, MapContainerProps} from 'react-leaflet';
+import {MapContainer, MapContainerProps, TileLayer} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Definition of type specifying the variants of information on the map
@@ -15,8 +15,8 @@ const Map = ({children}: MapContainerProps) => {
     <MapContainer
       ref={mapRef} // Setting map reference
       className="map-container h-full w-full rounded-t-2xl p-1" // CSS class for map container
-      center={[51.505, -0.09]} // Initial map center
-      zoom={16} // Initial map zoom level
+      center={[50, 0]} // Initial map center
+      zoom={3} // Initial map zoom level
       scrollWheelZoom={true} // Enabling zooming with mouse wheel
       zoomControl={false} // Disabling zoom control
       attributionControl={false}>
