@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.22.3",
-    "tailwind-merge": "^2.2.2"
+    "tailwind-merge": "^2.2.2",
+    "victory": "^37.0.2"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.9",
