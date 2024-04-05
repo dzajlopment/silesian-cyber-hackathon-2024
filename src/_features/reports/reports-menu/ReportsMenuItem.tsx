@@ -8,7 +8,7 @@ export type ReportsMenuItemProps = {
 export const ReportMenuItem = (props: ReportsMenuItemProps) => {
   const {type: reportType, createdAt} = props.report;
   const typeName = ReportTypeNames[reportType];
-  const dateString = new Date(createdAt).toLocaleDateString(undefined, {
+  const dateString = createdAt.toLocaleDateString(undefined, {
     hour: '2-digit',
     minute: '2-digit',
     weekday: 'short',
