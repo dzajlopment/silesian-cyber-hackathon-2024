@@ -4,6 +4,8 @@ import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
 import {LiveUsageScreen} from './_features/live-usage/LiveUsageScreen.tsx';
+import {Theme} from '@radix-ui/themes';
+import '@radix-ui/themes/styles.css';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,8 @@ const root = document.getElementById('root')!;
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Theme>
+      <RouterProvider router={router} />
+    </Theme>
   </React.StrictMode>,
 );
