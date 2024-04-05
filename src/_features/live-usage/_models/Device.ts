@@ -1,6 +1,7 @@
 export const DeviceTypeNames = {
   'power-meter': 'Power meter',
   'water-meter': 'Water meter',
+  'gas-meter': 'Gas meter',
 };
 
 export type DeviceType = keyof typeof DeviceTypeNames;

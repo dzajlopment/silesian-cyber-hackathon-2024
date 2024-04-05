@@ -1,53 +1,40 @@
 import {Device} from './_models/Device.ts';
 import {LiveUsageTable} from './live-usage-table/LiveUsageTable.tsx';
+import {useEffect, useState} from 'react';
 
-const DEVICES_DUMMY_DATA: Device[] = [
-  {
-    id: 'pm-1',
-    type: 'power-meter',
-    location: 'Laboratory Power Station',
-    usageValue: 2,
-    usageUnit: 'kWh',
-    status: 'ok',
-  },
-  {
-    id: 'pm-2',
-    type: 'power-meter',
-    location: 'Main Power Station',
-    usageValue: 11.4,
-    usageUnit: 'kWh',
-    status: 'no-signal',
-  },
-  {
-    id: 'pm-3',
-    type: 'power-meter',
-    location: 'Main Power Station',
-    usageValue: 0,
-    usageUnit: 'kWh',
-    status: 'alert',
-    alertDescription: 'No power',
-  },
-  {
-    id: 'wm-1',
-    type: 'water-meter',
-    location: 'Water Pumping Station',
-    usageValue: 3.5,
-    usageUnit: 'l/min',
-    status: 'ok',
-    alertDescription: 'No power',
-  },
-  {
-    id: 'wm-2',
-    type: 'water-meter',
-    location: 'Sewage Pump',
-    usageValue: 12.2,
-    usageUnit: 'l/min',
-    status: 'ok',
-  },
-];
+const API_URL = 'http://192.168.17.187:3000/api/v1';
 
 export const LiveUsageScreen = () => {
-  const devices = DEVICES_DUMMY_DATA;
+  const [devices, setDevices] = useState<Device[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const request = await fetch(`${API_URL}/meter`);
+      const json = await request.json();
+
+      const x = json.data.map((entry: any) => {
+        return {
+          id: entry._id.slice(0, 8),
+          type: `${entry.meterType}-meter`,
+          location: entry.locationName,
+          usageValue: entry.value,
+          usageUnit:
+            entry.meterType === 'gas'
+              ? 'm3'
+              : entry.meterType === 'power'
+                ? 'kWh'
+                : 'l/min',
+          status:
+            Math.random() > 0.3
+              ? 'ok'
+              : Math.random() > 0.2
+                ? 'alert'
+                : 'no-signal',
+        } as Device;
+      });
+      setDevices(x);
+    })();
+  }, []);
 
   return (
     <main className="px-6">
