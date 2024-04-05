@@ -19,6 +19,7 @@ const router = createBrowserRouter([
             <MapScreen />
           </section>
         ),
+        children: [{path: 'device/:id', element: <div></div>}],
       },
     ],
   },

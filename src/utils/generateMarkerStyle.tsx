@@ -3,19 +3,23 @@ import {InfoVariants} from '../_features/map';
 import cn from './tailwind';
 import {ExclamationTriangleIcon} from '@radix-ui/react-icons';
 
+// Function to generate marker style based on variant, danger flag, and text
 export default function generateMarkerStyle(
-  variant: InfoVariants | '',
-  isDanger: boolean,
-  text: string,
+  variant: InfoVariants | '', // Variant of the marker
+  isDanger: boolean, // Flag indicating if the marker is dangerous
+  text: string, // Text content of the marker
 ) {
+  // Base class for marker
   const baseClass =
     'rounded-full bg-blue-500 text-[#262D40] flex justify-center items-center flex-row whitespace-nowrap !w-fit px-4 py-3 !h-auto font-regular text-base';
 
-  const marker = {
+  // Default marker style
+  let marker = {
     className: baseClass,
     html: <div>{text}</div>,
   };
 
+  // Applying specific styles based on variant
   if (variant === 'electricity') {
     marker.className = cn(baseClass, 'bg-[#00C7BE]');
     marker.html = (
@@ -63,10 +67,12 @@ export default function generateMarkerStyle(
     );
   }
 
+  // Applying danger style if the marker is dangerous
   if (isDanger) {
     marker.className = cn(marker.className, 'bg-[#FF883F]');
   }
 
+  // Returning marker style with HTML converted to string
   return {
     className: marker.className,
     html: renderToString(marker.html),
