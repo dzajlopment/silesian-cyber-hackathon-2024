@@ -12,6 +12,14 @@ const routes: RootNavigationRoute[] = [
     title: 'Map', // Title of the route
     to: '/map', // Path to navigate to
   },
+  {
+    title: 'Live usage',
+    to: '/live-usage',
+  },
+  {
+    title: 'Reports',
+    to: '/reports',
+  },
 ];
 
 // RootNavigation component definition
