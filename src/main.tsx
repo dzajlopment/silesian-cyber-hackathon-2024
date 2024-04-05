@@ -5,7 +5,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
 import {Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
-import {MapScreen} from './_features/map';
+import {DeviceModalInfo, MapScreen} from './_features/map';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
             <MapScreen />
           </section>
         ),
-        children: [{path: 'device/:id', element: <div></div>}],
+        children: [{path: 'device/:id', element: <DeviceModalInfo />}],
       },
     ],
   },
