@@ -6,7 +6,9 @@ import {RootLayout} from './_layout/RootLayout.tsx';
 import {LiveUsageScreen} from './_features/live-usage/LiveUsageScreen.tsx';
 import {Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
-import {DeviceModalInfo, MapScreen} from './_features/map';
+import {MapScreen} from './_features/map';
+import {ReportsScreen} from './_features/reports/ReportsScreen.tsx';
+import {DeviceModalInfo} from './_features/map';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: 'live-usage',
         element: <LiveUsageScreen />,
+      },
+      {
+        path: 'reports',
+        element: <ReportsScreen />,
       },
     ],
   },

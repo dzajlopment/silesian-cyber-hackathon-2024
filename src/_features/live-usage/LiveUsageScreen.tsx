@@ -19,13 +19,30 @@ const DEVICES_DUMMY_DATA: Device[] = [
     status: 'no-signal',
   },
   {
-    id: 'pm-2',
+    id: 'pm-3',
     type: 'power-meter',
     location: 'Main Power Station',
     usageValue: 0,
     usageUnit: 'kWh',
     status: 'alert',
     alertDescription: 'No power',
+  },
+  {
+    id: 'wm-1',
+    type: 'water-meter',
+    location: 'Water Pumping Station',
+    usageValue: 3.5,
+    usageUnit: 'l/min',
+    status: 'ok',
+    alertDescription: 'No power',
+  },
+  {
+    id: 'wm-2',
+    type: 'water-meter',
+    location: 'Sewage Pump',
+    usageValue: 12.2,
+    usageUnit: 'l/min',
+    status: 'ok',
   },
 ];
 
