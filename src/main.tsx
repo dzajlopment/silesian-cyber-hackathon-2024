@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {RootLayout} from './_layout/RootLayout.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Hello</h1>,
+    element: <RootLayout />,
+    children: [
+      {
+        path: 'map',
+        element: <h1>Map</h1>,
+      },
+    ],
   },
 ]);
 
