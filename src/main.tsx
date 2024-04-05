@@ -15,7 +15,7 @@ const router = createBrowserRouter([
       {
         path: 'map',
         element: (
-          <section className="w-full h-full relative">
+          <section className="w-full h-full relative ">
             <MapScreen />
           </section>
         ),

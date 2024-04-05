@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/themes": "^3.0.2",
     "clsx": "^2.1.0",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
@@ -19,6 +20,7 @@
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.9",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-leaflet": "^3.0.0",

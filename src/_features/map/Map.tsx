@@ -2,6 +2,8 @@ import {useRef} from 'react';
 import {MapContainer, TileLayer, MapContainerProps} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+export type InfoVariants = 'electricity' | 'water' | 'gas' | 'trash' | 'alert';
+
 const Map = ({children}: MapContainerProps) => {
   const mapRef = useRef(null);
 
