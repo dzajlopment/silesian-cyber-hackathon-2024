@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {RootLayout} from './_layout/RootLayout.tsx';
+import {Map as MapScreen} from './_features/map';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'map',
-        element: <h1>Map</h1>,
+        element: (
+          <section className="w-full h-full relative">
+            <MapScreen />
+          </section>
+        ),
       },
     ],
   },
