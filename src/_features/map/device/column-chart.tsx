@@ -1,4 +1,3 @@
-import React from 'react';
 import {VictoryChart, VictoryBar, VictoryAxis} from 'victory';
 
 const data = [
@@ -24,7 +23,7 @@ const ColumnChart = () => {
         tickValues={[1, 2, 3, 4, 5]}
         tickFormat={data.map((datum) => datum.day)}
       />
-      <VictoryAxis dependentAxis tickFormat={(t) => `${t}`} />
+      <VictoryAxis dependentAxis tickFormat={(t: number) => `${t}`} />
       <VictoryBar
         data={data}
         x="day"

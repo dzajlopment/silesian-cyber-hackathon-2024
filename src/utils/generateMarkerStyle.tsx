@@ -20,7 +20,7 @@ export default function generateMarkerStyle(
   };
 
   // Applying specific styles based on variant
-  if (variant === 'electricity') {
+  if (variant === 'power') {
     marker.className = cn(baseClass, 'bg-[#00C7BE]');
     marker.html = (
       <div>

@@ -3,7 +3,7 @@ import {MapContainer, TileLayer, MapContainerProps} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Definition of type specifying the variants of information on the map
-export type InfoVariants = 'electricity' | 'water' | 'gas' | 'trash' | 'alert';
+export type InfoVariants = 'power' | 'water' | 'gas' | 'trash' | 'alert';
 
 // Map component taking children as MapContainerProps
 const Map = ({children}: MapContainerProps) => {

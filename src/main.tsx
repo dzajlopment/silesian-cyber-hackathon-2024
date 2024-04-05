@@ -29,9 +29,7 @@ const router = createBrowserRouter([
 const root = document.getElementById('root')!;
 
 ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <Theme className="h-full flex flex-col">
-      <RouterProvider router={router} />
-    </Theme>
-  </React.StrictMode>,
+  <Theme className="h-full flex flex-col">
+    <RouterProvider router={router} />
+  </Theme>,
 );
