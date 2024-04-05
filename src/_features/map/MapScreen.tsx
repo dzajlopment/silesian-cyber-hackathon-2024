@@ -5,7 +5,7 @@ import Points from './Points';
 const MapScreen = () => {
   return (
     <Map>
-      {/* <Accidents /> */}
+      <Accidents />
       <Points />
     </Map>
   );
